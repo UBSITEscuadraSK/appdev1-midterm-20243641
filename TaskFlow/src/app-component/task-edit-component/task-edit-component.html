@@ -1,11 +1,19 @@
 <div *ngIf="task" class="mt-3 card p-3 shadow">
 
-    <h4>Edit Task</h4>
+    <label class="form-label fw-semibold">Edit Task</label>
   
     <input [(ngModel)]="task.title" class="form-control mb-2">
   
     <input [(ngModel)]="task.description" class="form-control mb-2">
-  
+
+    <div class="col-md-6 mb-3">
+        <label class="form-label fw-semibold">Due Date</label>
+        <input type="date" 
+               [(ngModel)]="task.dueDate" 
+               class="form-control">
+      </div>
+
+    <label class="form-label fw-semibold">Set Priority</label>
     <select [(ngModel)]="task.status" class="form-select mb-2">
       <option>Pending</option>
       <option>In Progress</option>

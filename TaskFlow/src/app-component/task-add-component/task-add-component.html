@@ -3,7 +3,7 @@
   <input [(ngModel)]="task.title" placeholder="Title" class="form-control mb-2">
   <input [(ngModel)]="task.description" placeholder="Description" class="form-control mb-2">
   
-    <!-- STATUS -->
+
     <div class="mb-3">
       <label class="form-label fw-bold">Task Status</label>
       <select [(ngModel)]="task.status" class="form-select">
@@ -14,7 +14,13 @@
       </select>
     </div>
   
-    <!-- PRIORITY -->
+    <div class="col-md-6 mb-3">
+        <label class="form-label fw-semibold">Due Date</label>
+        <input type="date" 
+               [(ngModel)]="task.dueDate" 
+               class="form-control">
+      </div>
+
     <div class="mb-3">
       <label class="form-label fw-bold">Priority Level</label>
       <select [(ngModel)]="task.priority" class="form-select">
@@ -25,7 +31,7 @@
       </select>
     </div>
   
-    <!-- BUTTON -->
+
     <div class="d-flex justify-content-end">
       <button (click)="addTask()" class="btn btn-success px-4">
          Add Task
