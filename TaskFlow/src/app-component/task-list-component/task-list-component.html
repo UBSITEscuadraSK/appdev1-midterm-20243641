@@ -1,1 +1,18 @@
-<p>task-list-component works!</p>
+<h2>Task List</h2>
+
+<table class="table table-striped">
+  <tr>
+    <th>Title</th>
+    <th>Status</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr *ngFor="let task of tasks">
+    <td>{{ task.title }}</td>
+    <td>{{ task.status }}</td>
+    <td>
+      <a [routerLink]="['/tasks', task.id]" class="btn btn-primary btn-sm">View</a>
+      <button (click)="deleteTask(task.id)" class="btn btn-danger btn-sm">Delete</button>
+    </td>
+  </tr>
+</table>

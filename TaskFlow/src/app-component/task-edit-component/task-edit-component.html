@@ -1,1 +1,25 @@
-<p>task-edit-component works!</p>
+<div *ngIf="task" class="mt-3 card p-3 shadow">
+
+    <h4>Edit Task</h4>
+  
+    <input [(ngModel)]="task.title" class="form-control mb-2">
+  
+    <input [(ngModel)]="task.description" class="form-control mb-2">
+  
+    <select [(ngModel)]="task.status" class="form-select mb-2">
+      <option>Pending</option>
+      <option>In Progress</option>
+      <option>Completed</option>
+    </select>
+  
+    <select [(ngModel)]="task.priority" class="form-select mb-2">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+    </select>
+  
+    <button (click)="updateTask()" class="btn btn-warning">
+      💾 Save Changes
+    </button>
+  
+  </div>
