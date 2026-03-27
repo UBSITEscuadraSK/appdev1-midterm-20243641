@@ -57,3 +57,19 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+TaskFlow — Personal Task Manager
+- A lightweight browser-based task management app built with Angular v21 (standalone components) and Bootstrap 5.
+
+What it does
+Users can create, view, edit, delete, and track tasks — each with a title, description, due date, status (Pending / In Progress / Completed), and priority (Low / Medium / High).
+
+Tech Stack
+Angular v21 standalone components + routing
+TypeScript interface for the Task data model
+Angular Service for CRUD operations
+Bootstrap 5 for all UI/styling
+
+Key Components
+AppComponent → NavbarComponent → TaskListComponent → TaskDetailComponent (with child routes: TaskInfoComponent, TaskEditComponent) + TaskAddComponent
